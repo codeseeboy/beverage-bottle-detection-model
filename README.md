@@ -1,6 +1,13 @@
-# Beverage Detection YOLO Training Project
+# 🥤 Beverage Bottle Detection — YOLOv8
 
-A comprehensive YOLO-based beverage bottle detection system with 73 different bottle classes, implemented with best practices and proper checkpointing.
+> An object-detection model trained to recognize **73 beverage-bottle classes** from 5,000+ annotated images. Covers the full ML workflow: dataset prep, two-phase training with checkpointing, evaluation, and export for deployment.
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-111F68?style=flat-square&logo=ultralytics&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
+
+📓 Full pipeline in [`Beverage_bottle_detection.ipynb`](Beverage_bottle_detection.ipynb).
 
 ## 📁 Project Structure
 
@@ -165,4 +172,8 @@ DEVICE = "GPU" if available else "CPU"
 - **Auto-Resume**: Never lose training progress
 - **Production Ready**: Optimized for real-world deployment
 - **Easy Testing**: Simple upload to YOLOv8 app for immediate testing
+
+---
+
+Built by **Shashikant Rajput** — [LinkedIn](https://www.linkedin.com/in/shashikant-rajput) · [Portfolio](https://ezzshashi.netlify.app)
 
