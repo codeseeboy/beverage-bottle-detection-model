@@ -1,15 +1,10 @@
-# 🥤 Beverage Bottle Detection — YOLOv8
+# Beverage bottle detection (YOLOv8)
 
-> An object-detection model trained to recognize **73 beverage-bottle classes** from 5,000+ annotated images. Covers the full ML workflow: dataset prep, two-phase training with checkpointing, evaluation, and export for deployment.
+An object-detection model trained to recognize **73 beverage-bottle classes** from 5,000+ annotated images. Covers the full ML workflow: dataset prep, two-phase training with checkpointing, evaluation, and export for deployment.
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![YOLOv8](https://img.shields.io/badge/YOLOv8-111F68?style=flat-square&logo=ultralytics&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
+Full pipeline in [`Beverage_bottle_detection.ipynb`](Beverage_bottle_detection.ipynb).
 
-📓 Full pipeline in [`Beverage_bottle_detection.ipynb`](Beverage_bottle_detection.ipynb).
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 /content/drive/MyDrive/BeverageDetection/
@@ -36,14 +31,14 @@
 └── training_log.json
 ```
 
-## 🎯 Dataset Information
+## Dataset Information
 
 - **Total Classes**: 73 beverage bottle types
 - **Images**: 5000+ training images
 - **Format**: YOLO format with bounding box annotations
 - **Categories**: Various bottle sizes, brands, and packaging types
 
-## 🚀 Training Strategy
+## Training Strategy
 
 ### Phase 1: Initial Training (50 Epochs)
 - **Model**: YOLOv8n (Nano) with pre-trained weights
@@ -57,7 +52,7 @@
 - **Purpose**: Fine-tuning and performance optimization
 - **Final Model**: `models/best_models/best_beverage_model.pt`
 
-## 💻 Code Structure
+## Code Structure
 
 ### Step 1: Environment Setup
 ```python
@@ -94,18 +89,18 @@
 # Save best model with highest mAP score
 ```
 
-## 🏆 Best Practices Implemented
+## Best Practices Implemented
 
-- ✅ **Automatic Checkpointing**: Saves progress every 10 epochs
-- ✅ **Resume Training**: Continues from last checkpoint if interrupted
-- ✅ **Progress Tracking**: JSON log file tracks training state
-- ✅ **Google Drive Integration**: All files saved to persistent storage
-- ✅ **Memory Optimization**: Proper batch size and worker configuration
-- ✅ **Validation Monitoring**: Regular validation during training
-- ✅ **Early Stopping**: Prevents overfitting with patience parameter
-- ✅ **Model Versioning**: Organized checkpoint and best model storage
+- **Automatic Checkpointing**: Saves progress every 10 epochs
+- **Resume Training**: Continues from last checkpoint if interrupted
+- **Progress Tracking**: JSON log file tracks training state
+- **Google Drive Integration**: All files saved to persistent storage
+- **Memory Optimization**: Proper batch size and worker configuration
+- **Validation Monitoring**: Regular validation during training
+- **Early Stopping**: Prevents overfitting with patience parameter
+- **Model Versioning**: Organized checkpoint and best model storage
 
-## 📊 Training Parameters
+## Training Parameters
 
 ```python
 EPOCHS_PHASE_1 = 50
@@ -116,7 +111,7 @@ CONFIDENCE_THRESHOLD = 0.5
 DEVICE = "GPU" if available else "CPU"
 ```
 
-## 🎬 Step-by-Step Execution
+## Step-by-Step Execution
 
 ### Phase 1: Initial Training (50 Epochs)
 1. Run setup and dataset preparation
@@ -129,20 +124,20 @@ DEVICE = "GPU" if available else "CPU"
 2. Continue training for additional 100 epochs (total 150)
 3. Best model saved as `best_beverage_model.pt`
 
-## 📈 Expected Results
+## Expected Results
 
 - **Phase 1 (50 epochs)**: Basic bottle detection capability
 - **Phase 2 (150 epochs)**: Optimized performance with higher mAP scores
 - **Final Model**: Production-ready beverage detection system
 
-## 🔧 Training Monitoring
+## Training Monitoring
 
 - Training plots automatically generated in `runs/` directory
 - Loss curves, precision, recall, and mAP metrics tracked
 - Validation performed every epoch
 - Best weights saved based on validation mAP score
 
-## 📱 Deployment Instructions
+## Deployment Instructions
 
 ### Final Step: YOLOv8 App Testing
 
@@ -165,15 +160,10 @@ DEVICE = "GPU" if available else "CPU"
    - Verify detection accuracy across different bottle types
    - Test with various lighting conditions and angles
 
-## ✨ Key Features
+## Key Features
 
 - **73 Bottle Classes**: Comprehensive beverage bottle recognition
 - **Robust Training**: Multi-phase training approach
 - **Auto-Resume**: Never lose training progress
 - **Production Ready**: Optimized for real-world deployment
 - **Easy Testing**: Simple upload to YOLOv8 app for immediate testing
-
----
-
-Built by **Shashikant Rajput** — [LinkedIn](https://www.linkedin.com/in/shashikant-rajput) · [Portfolio](https://ezzshashi.netlify.app)
-
